@@ -8,6 +8,9 @@ const { format } = require('date-fns');
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 
+// Configuração para servir arquivos estáticos
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Caminho do banco de dados
 const DATABASE = path.join(__dirname, '_database.db');
 
